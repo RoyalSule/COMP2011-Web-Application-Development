@@ -1,5 +1,7 @@
+from flask import render_templatec
 from app import app
 
 @app.route('/')
 def index():
-    return "Hello World!!!"
+    user = {'name': 'Homer Simspon'}
+    return render_template('index.html', title='Simple template example', user=user)
